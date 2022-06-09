@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div>{{ .Params.Title }}</div>
+<div>{{ .Content }}</div>
+<div>
+    {{ range .Pages.ByWeight }}
+            <div>{{ .Render "summary" }}</div>
+    {{ end }}
+</div>
+{{ end }}
